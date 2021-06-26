@@ -1,0 +1,52 @@
+<mat-grid-list
+  [ngStyle]="{ margin: '4px' }"
+  cols="8"
+  rowHeight="4:6"
+  gutterSize="4"
+>
+  <mat-grid-tile
+    *ngFor="
+      let i of [
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1
+      ]
+    "
+  >
+    <div
+      style="
+        border: 1px solid black;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://m.media-amazon.com/images/M/MV5BNTkwOTE1ZDYtODQ3Yy00YTYwLTg0YWQtYmVkNmFjNGZlYmRiXkEyXkFqcGdeQXVyNTc4MjczMTM@._V1_UX182_CR0,0,182,268_AL_.jpg');
+        background-size: cover;
+        border-radius: 2px;
+      "
+    >
+      <div
+        style="
+          color: white;
+          background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.8)
+          );
+          padding: 2px;
+          position: absolute;
+          top: auto;
+          bottom: 0px;
+          height: 30%;
+          width: 100%;
+        "
+      >
+        <div style="font-size: 28px;">Loki</div>
+        <div>
+          <button mat-icon-button color="primary">
+            <mat-icon>thumb_up</mat-icon>
+          </button>
+          <button mat-icon-button color="primary">
+            <mat-icon>thumb_down</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

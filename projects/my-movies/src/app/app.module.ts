@@ -9,19 +9,19 @@ import { MatCardModule } from '@angular/material/card'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MovieGridComponent } from './movie-grid/movie-grid.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { BrowserComponent } from './browser/browser.component';
 import { FavComponent } from './fav/fav.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MovielistComponent } from './movielist/movielist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MovieGridComponent,
     ToolbarComponent,
     BrowserComponent,
     FavComponent,
+    MovielistComponent,
   ],
   imports: [
     BrowserModule,
