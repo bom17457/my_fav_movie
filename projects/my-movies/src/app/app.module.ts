@@ -15,6 +15,8 @@ import { FavComponent } from './fav/fav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovielistComponent } from './movielist/movielist.component';
 import { PopularComponent } from './popular/popular.component';
+import { UpcomingComponent } from './upcoming/upcoming.component';
+import { LatestComponent } from './latest/latest.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { PopularComponent } from './popular/popular.component';
     FavComponent,
     MovielistComponent,
     PopularComponent,
+    UpcomingComponent,
+    LatestComponent,
   ],
   imports: [
     BrowserModule,
