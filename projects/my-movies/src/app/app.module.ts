@@ -14,6 +14,7 @@ import { BrowserComponent } from './browser/browser.component';
 import { FavComponent } from './fav/fav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovielistComponent } from './movielist/movielist.component';
+import { PopularComponent } from './popular/popular.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { MovielistComponent } from './movielist/movielist.component';
     BrowserComponent,
     FavComponent,
     MovielistComponent,
+    PopularComponent,
   ],
   imports: [
     BrowserModule,
