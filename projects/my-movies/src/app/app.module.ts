@@ -20,6 +20,7 @@ import { UpcomingComponent } from './upcoming/upcoming.component';
 import { LatestComponent } from './latest/latest.component';
 import { HttpInterceptorProviders } from './http-inceptors';
 import { MovieItemComponent } from './movielist/movie-item/movie-item.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MovieItemComponent } from './movielist/movie-item/movie-item.component'
     UpcomingComponent,
     LatestComponent,
     MovieItemComponent,
+    LoginFormComponent,
   ],
   imports: [
     BrowserModule,
