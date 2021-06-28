@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatButtonModule } from '@angular/material/button'
 import { MatGridListModule } from '@angular/material/grid-list'
 import { MatCardModule } from '@angular/material/card'
+import { MatMenuModule } from '@angular/material/menu'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,8 @@ import { MovielistComponent } from './movielist/movielist.component';
 import { PopularComponent } from './popular/popular.component';
 import { UpcomingComponent } from './upcoming/upcoming.component';
 import { LatestComponent } from './latest/latest.component';
+import { HttpInterceptorProviders } from './http-inceptors';
+import { MovieItemComponent } from './movielist/movie-item/movie-item.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,7 @@ import { LatestComponent } from './latest/latest.component';
     PopularComponent,
     UpcomingComponent,
     LatestComponent,
+    MovieItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,8 +43,11 @@ import { LatestComponent } from './latest/latest.component';
     MatGridListModule,
     MatCardModule,
     HttpClientModule,
+    MatMenuModule
   ],
-  providers: [],
+  providers: [
+    HttpInterceptorProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
