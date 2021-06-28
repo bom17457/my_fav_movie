@@ -1,0 +1,22 @@
+<div movie_item id="movie_item">
+  <div class="movie_item_poster">
+    <img [src]="'https://image.tmdb.org/t/p/w500/' + movie?.poster_path" />
+    <div class="movie_item_poster_options">
+      <button mat-icon-button [mat-menu-trigger-for]="options">
+        <mat-icon color="white"> more_vert </mat-icon>
+      </button>
+      <mat-menu #options="matMenu">
+        <button (click)="add_favorite()" mat-menu-item><mat-icon>favorite</mat-icon>favorite</button>
+        <button (click)="add_watchlist()" mat-menu-item><mat-icon>bookmark</mat-icon>Watchlist</button>
+      </mat-menu>
+    </div>
+  </div>
+  <div class="movie_item_content">
+    <div class="movie_item_content_title">
+      {{ movie?.title }}
+    </div>
+    <div class="movie_item_content_date">
+      {{ movie?.release_date }}
+    </div>
+  </div>
+</div>
