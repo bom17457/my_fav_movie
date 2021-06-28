@@ -21,6 +21,7 @@ import { LatestComponent } from './latest/latest.component';
 import { HttpInterceptorProviders } from './http-inceptors';
 import { MovieItemComponent } from './movielist/movie-item/movie-item.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
     MatGridListModule,
     MatCardModule,
     HttpClientModule,
-    MatMenuModule
+    MatMenuModule,
+    ReactiveFormsModule
   ],
   providers: [
     HttpInterceptorProviders
