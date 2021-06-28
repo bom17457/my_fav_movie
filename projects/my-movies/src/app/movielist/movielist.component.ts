@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { popular } from '../moviedb/movies';
 
 @Component({
   selector: 'app-movielist',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movielist.component.sass']
 })
 export class MovielistComponent implements OnInit {
+  @Input() movies: popular | undefined;
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }
