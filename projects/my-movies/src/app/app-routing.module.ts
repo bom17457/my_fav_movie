@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserComponent } from './browser/browser.component';
 import { FavComponent } from './fav/fav.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 const routes: Routes = [
   { path: '', component: BrowserComponent },
-  { path: 'favourite', component: FavComponent }
+  { path: 'favourite', component: FavComponent },
+  { path: 'login', component: LoginFormComponent },
 ];
 
 @NgModule({

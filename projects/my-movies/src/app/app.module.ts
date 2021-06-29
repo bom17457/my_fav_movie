@@ -6,6 +6,8 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatGridListModule } from '@angular/material/grid-list'
 import { MatCardModule } from '@angular/material/card'
 import { MatMenuModule } from '@angular/material/menu'
+import { MatInputModule } from '@angular/material/input';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,7 +24,6 @@ import { HttpInterceptorProviders } from './http-inceptors';
 import { MovieItemComponent } from './movielist/movie-item/movie-item.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,8 +46,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatGridListModule,
     MatCardModule,
-    HttpClientModule,
+    MatInputModule,
     MatMenuModule,
+    FlexLayoutModule,
+    HttpClientModule,
     ReactiveFormsModule
   ],
   providers: [

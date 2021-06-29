@@ -1,1 +1,36 @@
-<p>login-form works!</p>
+<div
+  fxLayout="row"
+  style="height: calc(100% - 64px)"
+  fxLayoutAlign="center center"
+>
+  <mat-card style="height: 294px; width: 303px">
+    <form
+      fxLayout="column"
+      fxFlexFill
+      fxLayoutAlign="start none"
+      [formGroup]="loginForm"
+      (ngSubmit)="login()"
+    >
+      <div class="form_title">Login</div>
+
+      <mat-form-field fxFlex="auto">
+        <mat-label> Username </mat-label>
+        <input matInput placeholder="Username" formControlName="username" />
+      </mat-form-field>
+
+      <mat-form-field fxFlex="auto">
+        <mat-label> Password </mat-label>
+        <input
+          type="password"
+          matInput
+          placeholder="Password"
+          formControlName="password"
+        />
+      </mat-form-field>
+
+      <div fxFlex="grow"></div>
+
+      <button color="primary" [disabled]="!loginForm.valid" mat-flat-button fxFlex>Login</button>
+    </form>
+  </mat-card>
+</div>
