@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, delay, map, switchMap } from 'rxjs/operators';
-import { request_token } from './request_token';
+import { request_token, session } from './request_token';
 import { user } from './user';
 
 @Injectable({
@@ -44,5 +44,11 @@ export class AuthenticationService {
       .pipe(
         catchError(this.handleError),
       )
+  }
+
+  public create_session(request_token: string): Observable<session> {
+    return this.http.post<session>('/api//authentication/session/new', {
+      request_token
+    }).pipe(catchError(this.handleError))
   }
 }

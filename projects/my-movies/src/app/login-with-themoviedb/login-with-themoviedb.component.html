@@ -1,0 +1,15 @@
+<div
+  fxLayout="row"
+  style="height: calc(100% - 64px)"
+  fxLayoutAlign="center center"
+>
+  <button
+    *ngIf="login_state; else wait_block"
+    color="primary"
+    (click)="login()"
+    mat-flat-button
+  >
+    Login With TheMovieDB
+  </button>
+  <ng-template #wait_block><p>Please Wait...</p></ng-template>
+</div>
