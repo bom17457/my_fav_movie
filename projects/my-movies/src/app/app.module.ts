@@ -26,6 +26,7 @@ import { MovieItemComponent } from './movielist/movie-item/movie-item.component'
 import { LoginFormComponent } from './login-form/login-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginWithThemoviedbComponent } from './login-with-themoviedb/login-with-themoviedb.component';
+import { SearchSidebarComponent } from './search-sidebar/search-sidebar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +40,7 @@ import { LoginWithThemoviedbComponent } from './login-with-themoviedb/login-with
     MovieItemComponent,
     LoginFormComponent,
     LoginWithThemoviedbComponent,
+    SearchSidebarComponent,
 
   ],
   imports: [
