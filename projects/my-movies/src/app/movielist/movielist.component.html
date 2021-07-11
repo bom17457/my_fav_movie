@@ -4,7 +4,7 @@
   rowHeight="2:4"
   gutterSize="16"
 >
-  <mat-grid-tile *ngFor="let movie of movies ? movies.results : []">
+  <mat-grid-tile *ngFor="let movie of movies">
     <ng-container>
       <app-movie-item [movie]="movie"> </app-movie-item>
     </ng-container>

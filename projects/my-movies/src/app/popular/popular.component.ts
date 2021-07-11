@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { movie } from '../moviedb/movie';
 import { MovieService } from '../moviedb/movie.service';
-import { popular } from '../moviedb/movies';
 
 @Component({
   selector: 'app-popular',
@@ -8,7 +8,7 @@ import { popular } from '../moviedb/movies';
   styleUrls: ['./popular.component.sass']
 })
 export class PopularComponent implements OnInit {
-  popular?: popular;
+  movies: movie[] = [];
 
   constructor(private movieService: MovieService) { }
 
@@ -18,8 +18,7 @@ export class PopularComponent implements OnInit {
 
   getPopular(): void {
     this.movieService.getPopular().subscribe(popular => {
-      (this.popular = popular)
-      console.log(popular)
+      this.movies = popular.results
     }, error => {
 
     });
