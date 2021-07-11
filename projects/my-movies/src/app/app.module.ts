@@ -9,6 +9,9 @@ import { MatMenuModule } from '@angular/material/menu'
 import { MatInputModule } from '@angular/material/input';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSelectModule } from '@angular/material/select';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +30,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginWithThemoviedbComponent } from './login-with-themoviedb/login-with-themoviedb.component';
 import { SearchSidebarComponent } from './search-sidebar/search-sidebar.component';
+import { SearchFormComponent } from './search-form/search-form.component';
+import { SearchComponent } from './search/search.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +46,8 @@ import { SearchSidebarComponent } from './search-sidebar/search-sidebar.componen
     LoginFormComponent,
     LoginWithThemoviedbComponent,
     SearchSidebarComponent,
+    SearchFormComponent,
+    SearchComponent,
 
   ],
   imports: [
@@ -55,6 +62,8 @@ import { SearchSidebarComponent } from './search-sidebar/search-sidebar.componen
     MatInputModule,
     MatMenuModule,
     MatSidenavModule,
+    MatExpansionModule,
+    MatSelectModule,
     FlexLayoutModule,
     HttpClientModule,
     ReactiveFormsModule
