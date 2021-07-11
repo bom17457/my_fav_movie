@@ -1,4 +1,6 @@
-<mat-drawer-container class="example-container">
-  <mat-drawer mode="side" opened>Drawer content</mat-drawer>
-  <mat-drawer-content><ng-content></ng-content></mat-drawer-content>
-</mat-drawer-container>
+<mat-sidenav-container class="layout-container">
+  <mat-sidenav class="side" mode="side" opened>
+    <app-search-form></app-search-form>
+  </mat-sidenav>
+  <mat-sidenav-content><ng-content></ng-content></mat-sidenav-content>
+</mat-sidenav-container>

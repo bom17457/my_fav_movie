@@ -2,8 +2,9 @@ import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http'
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
+import { discovery_query } from './discovery';
 
-import { popular } from './movies';
+import { popular, search } from './movies';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class MovieService {
 
   private handleError(error: HttpErrorResponse) {
     console.log(error)
-    
+
     if (error.status == 0) {
       // A client-side or network error
       console.error('An error occurred:', error.error);
@@ -33,5 +34,9 @@ export class MovieService {
       params: new HttpParams().set("page", page),
     }
     return this.http.get<popular>("/api/movie/popular", options).pipe(retry(3), catchError(this.handleError));
+  }
+
+  search(query: any): Observable<search> {
+    return this.http.get<search>("/api/discover/movie", { params: query }).pipe(catchError(this.handleError));
   }
 }

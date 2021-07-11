@@ -21,3 +21,10 @@ export interface upcoming {
     total_results: number;
     total_pages: number;
 }
+
+export interface search {
+    page: number;
+    results: movie[];
+    total_results: number;
+    total_pages: number;
+}
