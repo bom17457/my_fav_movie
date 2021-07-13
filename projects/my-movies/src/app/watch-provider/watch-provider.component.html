@@ -1,0 +1,12 @@
+<mat-label>Platforms</mat-label>
+
+<cdk-virtual-scroll-viewport itemSize="5" class="viewport">
+  <ul>
+    <mat-checkbox value="all"> All </mat-checkbox>
+    <li *cdkVirtualFor="let provider of provider_list">
+      <mat-checkbox [value]="provider.provider_id">
+        {{ provider.provider_name }}
+      </mat-checkbox>
+    </li>
+  </ul>
+</cdk-virtual-scroll-viewport>

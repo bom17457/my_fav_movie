@@ -32,6 +32,12 @@ import { LoginWithThemoviedbComponent } from './login-with-themoviedb/login-with
 import { SearchSidebarComponent } from './search-sidebar/search-sidebar.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { SearchComponent } from './search/search.component';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { MatRadioModule } from '@angular/material/radio';
+import { WatchProviderComponent } from './watch-provider/watch-provider.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +54,7 @@ import { SearchComponent } from './search/search.component';
     SearchSidebarComponent,
     SearchFormComponent,
     SearchComponent,
-
+    WatchProviderComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,12 +70,16 @@ import { SearchComponent } from './search/search.component';
     MatSidenavModule,
     MatExpansionModule,
     MatSelectModule,
+    MatRadioModule,
+    MatCheckboxModule,
+    ScrollingModule,
     FlexLayoutModule,
     HttpClientModule,
     ReactiveFormsModule
   ],
   providers: [
-    HttpInterceptorProviders
+    HttpInterceptorProviders,
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'outline' } }
   ],
   bootstrap: [AppComponent]
 })
